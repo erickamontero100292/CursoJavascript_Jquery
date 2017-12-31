@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JqueryPrimeros Pasos</title>
+	<script src="js/jquery.min.js"></script>
+
+	<script>
+		//document es una palabra reservada de javascript
+		//$(document).ready(function)(){} quedo obsoleta despues de la versin de jquery 1.7
+		//$(document).ready(function)(){}
+
+
+		$(document).on('ready',function(){
+			//puedo esucchar algun evento o aplicarle un metodo
+			//text interpreta es solo texto
+			$('#prueba').text('Hola mundo');
+			//html si inserta elementos html
+			$('.prueba').html('<strong>Estoy usando Jquery</strong>')
+		});
+
+
+	</script>
+</head>
+<body>
+	<div id="prueba"></div>
+
+	<div class="prueba"> </div>
+</body>
+</html>

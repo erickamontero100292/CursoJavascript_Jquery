@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Jquery getters y setters</title>
+	<script src="js/jquery.min.js"></script>
+
+	<script>
+		$(document).on('ready', function (){
+
+			//los metodos getters y setters tienen la misma funcion, obtener y colocar valores
+			//Es el mismo metodo
+			//Pasa por sobrecarga de parametros, gracias a jquery
+
+			//var almacen = $("#parrafo").html();
+			//alert(almacen);
+			//le asigno una clase, el primero es el nombre del atributo
+			//este vienen siento el set de attr
+			$("#prueba").attr("class","ejemplo");
+			//este vienen siento el get de attr
+			var clase = $('#prueba').attr('class');
+		 	var id_ = $("#prueba").attr('id');
+			alert("Class= "+clase +" - ID= "+ id_);
+			
+
+		});
+	</script>
+</head>
+<body>
+	<p id="parrafo">
+		<strong>Hola Jquery</strong>
+	</p>
+	<div id="prueba"></div>
+</body>	
+</html>

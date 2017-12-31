@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Selectores</title>
+	<script src="js/jquery.min.js"></script>
+
+	<script>
+	
+			var seleccion;// variable global para que este en alcance de todas las funciones
+	
+		$(document).on('ready',function(){
+			
+			seleccion = $(".ejem1"); //todos los elementos que tengan la clase ejem1
+
+			if(seleccion.length){
+				console.log("Existen" + seleccion.length);
+
+			}else{
+
+				console.log("No existen");
+			}
+
+			//metodo NOT va a seleccionar el elemento que no tiene alguna clase
+			//seleccion.not('.cl1').text("Este elemento no tiene la clase cl1");
+
+			//metod has (tener) va a selecciionar elemento que tenga esa caracteristicas, en este caso que tenga p
+
+			seleccion.has('p').text("Este elemento tiene un <p> en su contenido");
+
+			//Toma el objeto y devuelve el primer elemento de ese objeto
+			//la lista comienza como un arreglo
+			$('li').first().html('<strong>Soy el elemento 1</strong>')
+			//eq asigna a la posicion que se le este colocando
+			$('li').eq(2).html('<strong>Soy el elemento numero 3</strong>')
+
+		});
+
+
+	</script>
+</head>
+<body>
+	<div class="ejem1 cl1">
+		<p></p>
+	</div>
+	<div class="ejem1">
+		<span></span>
+	</div>
+
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</body>	
+</html>

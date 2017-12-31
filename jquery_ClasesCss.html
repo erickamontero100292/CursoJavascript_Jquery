@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery_ClasesCss</title>
+	<script src="js/jquery.min.js"></script>
+	<style>
+		.test{
+			background-color: red;
+		}
+
+	</style>
+
+	<script>
+	
+		$(document).on('ready',function(){
+			//cuando se haga click sobre el div se ejecuta
+			//una funcion
+				$(document).on("click",function(){
+					//cuando le haga click al div se le añade
+					//la clase test
+					//$("#test").addClass("test"); 
+					//remueve la clase 
+					//$("#test").removeClass("test");
+					//toggleClass lo que permite es agregar la clase sino la tiene o quitarla si la tiene
+					$("#test").toggleClass("test");
+					// si este elemento tiene la clase test entonces le setea el texto
+					if ($("#test").hasClass("test")){
+
+						$("#test").text("Hey, soy rojo");	
+					}else{
+
+						$("#test").text("Hey, soy blanco");
+					}
+				});
+
+
+		});
+	</script>
+</head>
+<body>
+	<div id="test" >Click on me</div>
+</body>	
+</html>
